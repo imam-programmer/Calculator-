@@ -4,16 +4,22 @@ import Display from './components/Display'
 import ButtonsContainer from './components/ButtonsContainer'
 const App = () => {
   const [calVal, setCalVal] = useState("")
+  const [remove, setremove] = useState([])
   function onButtonClick(buttonText){
    if(buttonText==="C"){
 setCalVal("")
    }else if(buttonText==="="){
 const result=eval(calVal)
 setCalVal(result)
-   }else{
+   }else if(buttonText=="AC"){
+setCalVal(item=>item.slice(0,-1))
+  
+   }
+   else{
     const newDisplayValue=calVal + buttonText
     setCalVal(newDisplayValue)
    }
+  
   }
   return (
     <div className={styles.calculator} >
