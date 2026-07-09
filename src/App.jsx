@@ -4,7 +4,7 @@ import Display from './components/Display'
 import ButtonsContainer from './components/ButtonsContainer'
 const App = () => {
   const [calVal, setCalVal] = useState("")
-  const [remove, setremove] = useState([])
+  
   function onButtonClick(buttonText){
    if(buttonText==="C"){
 setCalVal("")
