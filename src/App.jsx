@@ -9,8 +9,11 @@ const App = () => {
    if(buttonText==="C"){
 setCalVal("")
    }else if(buttonText==="="){
-const result=eval(calVal)
-setCalVal(result)
+    if(calVal){
+
+      const result=eval(calVal)
+      setCalVal(result)
+    }
    }else if(buttonText=="AC"){
 setCalVal(item=>item.slice(0,-1))
   
